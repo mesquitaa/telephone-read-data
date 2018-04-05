@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="contact" type="br.rpm.call.list.model.CallDetail"/>
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_padding">
+
+        <TextView
+            android:id="@+id/contact_name"
+            style="@style/ContactItem"
+            android:text="@{contact.name}"
+            tools:text="Contact Name"/>
+
+        <TextView
+            android:id="@+id/contact_date"
+            style="@style/ContactItem.Half"
+            android:layout_below="@id/contact_name"
+            android:text="@{contact.date}"
+            tools:text="Contact date"/>
+
+        <TextView
+            android:id="@+id/contact_duration"
+            style="@style/ContactItem.Half"
+            android:layout_below="@id/contact_name"
+            android:layout_toEndOf="@+id/contact_date"
+            android:layout_toRightOf="@+id/contact_date"
+            android:text="@{contact.duration}"
+            tools:text="Contact Duration"/>
+
+        <TextView
+            android:id="@+id/contact_number"
+            style="@style/ContactItem"
+            android:layout_below="@+id/contact_date"
+            android:text="@{contact.number}"
+            tools:text="Contact Number"/>
+
+        <TextView
+            android:id="@+id/contact_type"
+            style="@style/ContactItem"
+            android:layout_below="@+id/contact_number"
+            android:text="@{contact.callType}"
+            tools:text="Contact Type"/>
+    </android.support.percent.PercentRelativeLayout>
+</layout>
