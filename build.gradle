@@ -6,6 +6,7 @@ buildscript {
     ext.junit_version = '4.12'
     ext.test_runner_version = '1.0.1'
     ext.espresso_version = '3.0.1'
+    ext.bindingVersion = '1.0-rc1'
 
     repositories {
         google()
@@ -15,6 +16,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0-beta1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.databinding:dataBinder:$bindingVersion"
     }
 }
 
