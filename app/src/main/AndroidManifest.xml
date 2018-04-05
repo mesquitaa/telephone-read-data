@@ -34,6 +34,7 @@
         </receiver>
 
         <receiver android:name=".receiver.PhoneCheckReceiver"/>
+        <service android:name=".service.PhoneCheckService"/>
     </application>
 
 </manifest>
